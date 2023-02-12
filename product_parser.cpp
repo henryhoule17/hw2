@@ -4,7 +4,7 @@
 #include "book.h"
 #include "clothing.h"
 #include "movie.h"
-#include "util.h"
+//#define DEBUG
 using namespace std;
 
 
@@ -130,8 +130,8 @@ std::string ProductBookParser::categoryID()
  */
 Product* ProductBookParser::makeProduct()
 {
-
-
+    Book* nbook = new Book("book", prodName_, price_, qty_, author_, isbn_);
+    return nbook;
 }
 
 
@@ -186,8 +186,8 @@ std::string ProductClothingParser::categoryID()
 Product* ProductClothingParser::makeProduct()
 {
 
-
-
+    Clothing* nclo = new Clothing("clothing", prodName_, price_, qty_, brand_, size_);
+    return nclo;
 }
 
 
@@ -245,6 +245,6 @@ std::string ProductMovieParser::categoryID()
  */
 Product* ProductMovieParser::makeProduct()
 {
-
-
+    Movie* nmov = new Movie("movie", prodName_, price_, qty_, genre_, rating_); 
+    return nmov;
 }

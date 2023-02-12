@@ -2,7 +2,8 @@
 #define USER_H
 #include <iostream>
 #include <string>
-
+#include <deque>
+#include "product.h"
 /**
  * Implements User functionality and information storage
  *  You should not need to derive anything from User at this time
@@ -17,8 +18,13 @@ public:
     std::string getName() const;
     void deductAmount(double amt);
     virtual void dump(std::ostream& os);
+		std::deque<Product*> getCart() const;
+		void addToCart(Product* p);
+		void buyCart();
+		void printCart(std::ostream& os);
 
 private:
+		std::deque<Product*> cart;
     std::string name_;
     double balance_;
     int type_;

@@ -18,6 +18,11 @@ Product::~Product()
 
 }
 
+std::string Product::getCat() const
+{
+    return category_;
+}
+
 
 double Product::getPrice() const
 {

@@ -8,6 +8,7 @@
 #include <locale>
 #include "db_parser.h"
 #include "util.h"
+//#define DEBUG
 
 
 using namespace std;

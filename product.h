@@ -34,6 +34,7 @@ public:
     /**
      * Accessors and mutators
      */
+		std::string getCat() const;
     double getPrice() const;
     std::string getName() const;
     int getQty() const;
